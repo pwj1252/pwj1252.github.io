@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击气球游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>点击气球游戏</h1>
+            <p>得分：<span id="score">0</span></p>
+            <button id="start-btn">开始游戏</button>
+            <button id="end-btn" style="display:none;">结束游戏</button> <!-- 结束按钮 -->
+        </header>
+
+        <!-- 游戏难度和夜间模式按钮并排 -->
+        <div class="controls">
+            <div class="difficulty-selection">
+                <label for="difficulty">选择游戏难度：</label>
+                <select id="difficulty">
+                    <option value="easy">简单</option>
+                    <option value="medium">困难</option>
+                    <option value="hard">地狱</option>
+                </select>
+            </div>
+            <button id="night-mode-toggle">切换夜间模式</button>
+        </div>
+
+        <div class="game-area" id="game-area">
+            <!-- 气球将动态生成 -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
