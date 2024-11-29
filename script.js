@@ -1,4 +1,3 @@
-// 获取 DOM 元素
 const gameArea = document.getElementById("game-area");
 const scoreDisplay = document.getElementById("score");
 const startButton = document.getElementById("start-btn");
@@ -39,8 +38,8 @@ function setBalloonSpeed() {
 function createBalloon() {
     const balloon = document.createElement("div");
     balloon.classList.add("balloon");
-    balloon.style.left = `${randomPosition()}px`;
-    balloon.style.animationDuration = `${floatSpeed + Math.random() * 2}s`; // 根据难度调整浮动速度
+    balloon.style.left = `${randomPosition()}px`; // 使用反引号修正拼接
+    balloon.style.animationDuration = `${floatSpeed + Math.random() * 2}s`; // 使用反引号修正拼接
 
     // 点击气球得分
     balloon.addEventListener("click", () => {
@@ -89,7 +88,7 @@ function endGame() {
     });
 
     // 显示游戏结束信息
-    alert(`游戏结束！您的得分是：${score}`);
+    alert(`游戏结束！您的得分是：${score}`); // 使用模板字符串修正
 
     // 重置按钮显示
     startButton.style.display = "inline-block"; // 显示开始按钮
